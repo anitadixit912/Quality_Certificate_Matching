@@ -1,0 +1,12 @@
+apiVersion: solution.sap/v1
+kind: Solution
+
+metadata:
+  name: coa-quality-matching-71888
+  version: 1.0.0
+  description: AI-powered COA Quality Certificate Matching Agent for Lubes & Solid Chemicals — automates vendor COA verification against S/4HANA QM inspection plans with OCR extraction, LLM-based spec matching, and automated usage decision posting.
+
+assets:
+  - ref: ./assets/coa-quality-matching-agent/asset.yaml
+  - ref: ./assets/sap-s4-inspection-lot-mcp-server/asset.yaml
+  - ref: ./assets/sap-s4-inspection-plan-mcp-server/asset.yaml
