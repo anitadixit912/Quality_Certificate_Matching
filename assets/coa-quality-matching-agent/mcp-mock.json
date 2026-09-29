@@ -1,0 +1,595 @@
+{
+  "servers": {
+    "sap-s4-inspection-lot": {
+      "mcp_server_name": "sap.mcp/api_inspectionlot_srv",
+      "description": "MCP server for S/4HANA Inspection Lot, Usage Decision, and Inspection Characteristics",
+      "tools": {
+        "get_metadata_api_inspectionlot_srv": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "batch_for_api_inspectionlot_srv": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "list_a_inspectionlot_for_api_inspectionlot_srv": {
+          "description": "Retrieve a list of entities from the A_InspectionLot collection in the api_inspectionlot_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": [
+                {
+                  "InspectionLot": "0000123456",
+                  "Material": "LUB-001",
+                  "Plant": "1000",
+                  "InspectionLotType": "01",
+                  "InspectionLotHasUsageDecision": false,
+                  "PurchasingDocumentCategory": "F",
+                  "Supplier": "VENDOR001",
+                  "InspLotCreatedOnLocalDate": "/Date(1759161600000)/"
+                },
+                {
+                  "InspectionLot": "0000123457",
+                  "Material": "LUB-002",
+                  "Plant": "1000",
+                  "InspectionLotType": "01",
+                  "InspectionLotHasUsageDecision": false,
+                  "PurchasingDocumentCategory": "F",
+                  "Supplier": "VENDOR002",
+                  "InspLotCreatedOnLocalDate": "/Date(1759161600000)/"
+                }
+              ]
+            }
+          }
+        },
+        "create_a_inspectionlot_for_api_inspectionlot_srv": {
+          "description": "Create a new instance of the A_InspectionLot EntitySet in the api_inspectionlot_srv service. If the structure of the entity is not known, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "update_a_inspectionlot_for_api_inspectionlot_srv": {
+          "description": "Update an entity in A_InspectionLot EntitySet in the api_inspectionlot_srv service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "delete_a_inspectionlot_for_api_inspectionlot_srv": {
+          "description": "Delete an entity from A_InspectionLot EntitySet in the api_inspectionlot_srv service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "get_a_inspectionlot_for_api_inspectionlot_srv": {
+          "description": "Retrieve a single entity by its key from the A_InspectionLot collection in the api_inspectionlot_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "count_a_inspectionlot_for_api_inspectionlot_srv": {
+          "description": "Get the total count of entities in the A_InspectionLot collection in the api_inspectionlot_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "list_a_insplotusagedecision_for_api_inspectionlot_srv": {
+          "description": "Retrieve a list of entities from the A_InspLotUsageDecision collection in the api_inspectionlot_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "create_a_insplotusagedecision_for_api_inspectionlot_srv": {
+          "description": "Create a new instance of the A_InspLotUsageDecision EntitySet in the api_inspectionlot_srv service. If the structure of the entity is not known, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "InspectionLot": "0000123456",
+              "InspLotUsageDecisionCatalog": "A",
+              "InspLotUsgeDcsnSelectedSet": "01",
+              "InspLotUsageDecisionCodeGroup": "01",
+              "InspectionLotUsageDecisionCode": "A",
+              "InspLotUsageDecisionValuation": "1"
+            }
+          }
+        },
+        "update_a_insplotusagedecision_for_api_inspectionlot_srv": {
+          "description": "Update an entity in A_InspLotUsageDecision EntitySet in the api_inspectionlot_srv service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "delete_a_insplotusagedecision_for_api_inspectionlot_srv": {
+          "description": "Delete an entity from A_InspLotUsageDecision EntitySet in the api_inspectionlot_srv service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "get_a_insplotusagedecision_for_api_inspectionlot_srv": {
+          "description": "Retrieve a single entity by its key from the A_InspLotUsageDecision collection in the api_inspectionlot_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "count_a_insplotusagedecision_for_api_inspectionlot_srv": {
+          "description": "Get the total count of entities in the A_InspLotUsageDecision collection in the api_inspectionlot_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "list_a_inspectioncharacteristic_for_api_inspectionlot_srv": {
+          "description": "Retrieve a list of entities from the A_InspectionCharacteristic collection in the api_inspectionlot_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": [
+                {
+                  "InspectionLot": "0000123456",
+                  "InspPlanOperationInternalID": "00000001",
+                  "InspectionCharacteristic": "0001",
+                  "InspectionSpecificationText": "Viscosity @ 40C",
+                  "InspSpecUpperLimit": 55.0,
+                  "InspSpecLowerLimit": 45.0,
+                  "InspSpecTargetValue": 50.0,
+                  "InspectionSpecificationUnit": "CST"
+                }
+              ]
+            }
+          }
+        },
+        "create_a_inspectioncharacteristic_for_api_inspectionlot_srv": {
+          "description": "Create a new instance of the A_InspectionCharacteristic EntitySet in the api_inspectionlot_srv service. If the structure of the entity is not known, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "update_a_inspectioncharacteristic_for_api_inspectionlot_srv": {
+          "description": "Update an entity in A_InspectionCharacteristic EntitySet in the api_inspectionlot_srv service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "delete_a_inspectioncharacteristic_for_api_inspectionlot_srv": {
+          "description": "Delete an entity from A_InspectionCharacteristic EntitySet in the api_inspectionlot_srv service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "get_a_inspectioncharacteristic_for_api_inspectionlot_srv": {
+          "description": "Retrieve a single entity by its key from the A_InspectionCharacteristic collection in the api_inspectionlot_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "count_a_inspectioncharacteristic_for_api_inspectionlot_srv": {
+          "description": "Get the total count of entities in the A_InspectionCharacteristic collection in the api_inspectionlot_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_inspectionlot_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        }
+      }
+    },
+    "sap-s4-inspection-plan": {
+      "mcp_server_name": "sap.mcp/api_inspectionplan_srv",
+      "description": "MCP server for S/4HANA Inspection Plan, Material Assignments, and Characteristics",
+      "tools": {
+        "get_metadata_api_inspectionplan_srv": {
+          "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "batch_for_api_inspectionplan_srv": {
+          "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "list_a_inspectionplan_for_api_inspectionplan_srv": {
+          "description": "Retrieve a list of entities from the A_InspectionPlan collection in the api_inspectionplan_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": [
+                {
+                  "InspectionPlanGroup": "QP001",
+                  "InspectionPlan": "01",
+                  "InspectionPlanInternalVersion": "00000001",
+                  "BillOfOperationsDesc": "Lube Oil QM Plan",
+                  "Plant": "1000",
+                  "BillOfOperationsStatus": "4"
+                }
+              ]
+            }
+          }
+        },
+        "create_a_inspectionplan_for_api_inspectionplan_srv": {
+          "description": "Create a new instance of the A_InspectionPlan EntitySet in the api_inspectionplan_srv service. If the structure of the entity is not known, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "update_a_inspectionplan_for_api_inspectionplan_srv": {
+          "description": "Update an entity in A_InspectionPlan EntitySet in the api_inspectionplan_srv service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "delete_a_inspectionplan_for_api_inspectionplan_srv": {
+          "description": "Delete an entity from A_InspectionPlan EntitySet in the api_inspectionplan_srv service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "get_a_inspectionplan_for_api_inspectionplan_srv": {
+          "description": "Retrieve a single entity by its key from the A_InspectionPlan collection in the api_inspectionplan_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "count_a_inspectionplan_for_api_inspectionplan_srv": {
+          "description": "Get the total count of entities in the A_InspectionPlan collection in the api_inspectionplan_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "list_a_inspplanmaterialassgmt_for_api_inspectionplan_srv": {
+          "description": "Retrieve a list of entities from the A_InspPlanMaterialAssgmt collection in the api_inspectionplan_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "create_a_inspplanmaterialassgmt_for_api_inspectionplan_srv": {
+          "description": "Create a new instance of the A_InspPlanMaterialAssgmt EntitySet in the api_inspectionplan_srv service. If the structure of the entity is not known, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "update_a_inspplanmaterialassgmt_for_api_inspectionplan_srv": {
+          "description": "Update an entity in A_InspPlanMaterialAssgmt EntitySet in the api_inspectionplan_srv service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "delete_a_inspplanmaterialassgmt_for_api_inspectionplan_srv": {
+          "description": "Delete an entity from A_InspPlanMaterialAssgmt EntitySet in the api_inspectionplan_srv service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "get_a_inspplanmaterialassgmt_for_api_inspectionplan_srv": {
+          "description": "Retrieve a single entity by its key from the A_InspPlanMaterialAssgmt collection in the api_inspectionplan_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "count_a_inspplanmaterialassgmt_for_api_inspectionplan_srv": {
+          "description": "Get the total count of entities in the A_InspPlanMaterialAssgmt collection in the api_inspectionplan_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "list_a_inspplanopcharacteristic_for_api_inspectionplan_srv": {
+          "description": "Retrieve a list of entities from the A_InspPlanOpCharacteristic collection in the api_inspectionplan_srv service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "create_a_inspplanopcharacteristic_for_api_inspectionplan_srv": {
+          "description": "Create a new instance of the A_InspPlanOpCharacteristic EntitySet in the api_inspectionplan_srv service. If the structure of the entity is not known, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "update_a_inspplanopcharacteristic_for_api_inspectionplan_srv": {
+          "description": "Update an entity in A_InspPlanOpCharacteristic EntitySet in the api_inspectionplan_srv service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "delete_a_inspplanopcharacteristic_for_api_inspectionplan_srv": {
+          "description": "Delete an entity from A_InspPlanOpCharacteristic EntitySet in the api_inspectionplan_srv service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "get_a_inspplanopcharacteristic_for_api_inspectionplan_srv": {
+          "description": "Retrieve a single entity by its key from the A_InspPlanOpCharacteristic collection in the api_inspectionplan_srv service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        },
+        "count_a_inspplanopcharacteristic_for_api_inspectionplan_srv": {
+          "description": "Get the total count of entities in the A_InspPlanOpCharacteristic collection in the api_inspectionplan_srv service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_api_inspectionplan_srv tool first to get the metadata.",
+          "input_schema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "mock_response": {
+            "d": {
+              "results": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "created_for_agent": "coa-quality-matching-agent",
+    "mock_mode": true,
+    "deterministic": true,
+    "total_servers": 2,
+    "total_tools": 40,
+    "generated_from": [
+      "translation.json (inspection-lot)",
+      "translation.json (inspection-plan)"
+    ],
+    "generation_date": "2026-09-29"
+  }
+}
